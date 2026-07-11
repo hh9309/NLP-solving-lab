@@ -1,0 +1,6 @@
+{
+  "name": "非线性规划动态演进",
+  "description": "探索非线性规划核心算法（梯度下降、牛顿法、BFGS、罚函数等）在2D/3D双视角下的动态迭代收敛、KKT条件诊断及一维线搜索切片分析的交互式教学系统。",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
