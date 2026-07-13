@@ -217,28 +217,28 @@ export default function App() {
           </div>
         </div>
 
-        {/* 知识导引与 AI 洞察两个专业切片 */}
-        <div className="flex items-center bg-slate-50 border border-slate-100 p-1 rounded-xl gap-0.5">
-          <button
-            onClick={() => setIsKnowledgeOpen(true)}
-            className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-[11px] font-semibold text-slate-600 hover:text-indigo-600 hover:bg-white active:scale-95 transition-all"
-            title="查看非线性规划理论背景、公式与算法理论"
-          >
-            <BookOpen size={12.5} className="text-indigo-500" />
-            <span>知识导引</span>
-          </button>
-          <div className="w-px h-3.5 bg-slate-200" />
-          <button
-            onClick={() => setIsAIInsightsOpen(true)}
-            className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-[11px] font-semibold text-slate-600 hover:text-indigo-600 hover:bg-white active:scale-95 transition-all animate-pulse"
-            title="查看 KKT 边界条件、影子价格及 Hessian 实时诊断"
-          >
-            <Sparkles size={12.5} className="text-indigo-500" />
-            <span>AI 洞察</span>
-          </button>
-        </div>
+        {/* 右侧控制与导出工具组：知识导引、AI洞察与导出报告紧密排布 */}
+        <div className="flex items-center gap-4">
+          <div className="flex items-center bg-slate-50 border border-slate-100 p-1 rounded-xl gap-0.5">
+            <button
+              onClick={() => setIsKnowledgeOpen(true)}
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-[11px] font-semibold text-slate-600 hover:text-indigo-600 hover:bg-white active:scale-95 transition-all"
+              title="查看非线性规划理论背景、公式与算法理论"
+            >
+              <BookOpen size={12.5} className="text-indigo-500" />
+              <span>知识导引</span>
+            </button>
+            <div className="w-px h-3.5 bg-slate-200" />
+            <button
+              onClick={() => setIsAIInsightsOpen(true)}
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-[11px] font-semibold text-slate-600 hover:text-indigo-600 hover:bg-white active:scale-95 transition-all animate-pulse"
+              title="查看 KKT 边界条件、影子价格及 Hessian 实时诊断"
+            >
+              <Sparkles size={12.5} className="text-indigo-500" />
+              <span>AI 洞察</span>
+            </button>
+          </div>
 
-        <div className="flex items-center gap-3">
           <button
             onClick={() => setIsReportOpen(true)}
             id="btn-export-report"
@@ -657,6 +657,8 @@ export default function App() {
         tol={tol}
         maxIter={maxIter}
         scipyMethod={scipyMethod}
+        allTrajectories={allTrajectories}
+        algorithmsList={algorithmsList}
       />
 
       {/* 知识导引专业切片 Modal */}
